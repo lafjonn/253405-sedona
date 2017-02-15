@@ -31,21 +31,103 @@
     </header>
     
     <main>
-    
+      <div class="choice">
+        <form>
+         <div class="choice__column">
+           <span>Инфраструктура</span>
+           <input type="checkbox" name="pull" id="pull" checked>
+           <label for="pull">Бассейн</label>
+           <input type="checkbox" name="park" id="park">
+           <label for="park">Парковка</label>
+           <input type="checkbox" name="wifi" id="wifi">
+           <label for="wifi">Wi-Fi</label>
+         </div>
+         <div class="choice__column">
+          <span>Тип жилья</span>
+           <input type="checkbox" name="pull" id="pull" checked>
+           <label for="pull">Бассейн</label>
+           <input type="checkbox" name="park" id="park">
+           <label for="park">Парковка</label>
+           <input type="checkbox" name="wifi" id="wifi">
+           <label for="wifi">Wi-Fi</label>
+         </div>
+         <div class="choice__column">
+           <span>Стоимость в сутки (Р)</span>
+           <input type="submit" value="Показать">
+         </div>
+        </form>
+      </div>
+      
+      <div class="sort">
+        <span class="sort__strong">Найдено:</span>
+        <span class="sort__caption">Сортировка:</span>
+        <span class="sort__item  sort__item--active">По цене</span>
+        <span class="sort__item">По типу</span>
+        <span class="sort__item">По рейтингу</span>
+        <div class="sort__arrow"></div>
+        <div class="sort__arrow  sort__arrow--active"></div>
+      </div>
+      
+      <div class="hotels">
+        <div class="hotels__item hotel">
+          <img src="">
+          <div class="hotel__info">
+            <span class="hotel__caption">Amara Resort & Spa</span>
+            <span class="hotel__type">Гостиница</span>
+            <span class="hotel__price">ОТ 3500 Р.</span>
+            <a class="hotel__info" href="#">ПОДРОБНЕЕ</a>
+            <a class="hotel__book" href="#">ЗАБРОНИРОВАТЬ</a>
+          </div>
+          <div class="hotel__rating">
+            <div class="hotel__stars"></div>
+            <div class="hotel__rate-value">Рейтинг: 8,5</div>
+          </div>
+        </div>
+        
+        <div class="hotels__item hotel">
+          <img src="">
+          <div class="hotel__info">
+            <span class="hotel__caption">Desert Quail Inn</span>
+            <span class="hotel__type">Мотель</span>
+            <span class="hotel__price">ОТ 2000 Р.</span>
+            <a class="hotel__info" href="#">ПОДРОБНЕЕ</a>
+            <a class="hotel__book" href="#">ЗАБРОНИРОВАТЬ</a>
+          </div>
+          <div class="hotel__rating">
+            <div class="hotel__stars"></div>
+            <div class="hotel__rate-value">Рейтинг: 8,9</div>
+          </div>
+        </div>
+        
+        <div class="hotels__item hotel">
+          <img src="">
+          <div class="hotel__info">
+            <span class="hotel__caption">Villas at Poco Diablo</span>
+            <span class="hotel__type">Апартаменты</span>
+            <span class="hotel__price">ОТ 4000 Р.</span>
+            <a class="hotel__info" href="#">ПОДРОБНЕЕ</a>
+            <a class="hotel__book" href="#">ЗАБРОНИРОВАТЬ</a>
+          </div>
+          <div class="hotel__rating">
+            <div class="hotel__stars"></div>
+            <div class="hotel__rate-value">Рейтинг: 9,2</div>
+          </div>
+        </div>
+      </div>
     </main>
     
     <footer class="footer">
       <div class="footer__wrapper">
        
-        <div class="footer__tag"></div>
+        <div class="footer__tag">#VisitSedona</div>
         <div class="footer__social social">
-          <a class="social__item social__item--twitter"></a>
-          <a class="social__item social__item--facebook"></a>
-          <a class="social__item social__item--youtube"></a>
+          <a class="social__item social__item--twitter" href="#"></a>
+          <a class="social__item social__item--facebook" href="#"></a>
+          <a class="social__item social__item--youtube" href="#"></a>
         </div>
         
         <div class="footer__copyright">
-          <span></span>
+          <span>Website by:</span>
           <a class="footer__academy">
             <img src="" alt="HTML Academy">
           </a>
@@ -53,20 +135,6 @@
         
       </div>
     </footer>
-    
-    <div class="popup popup--hidden">
-      <form>
-        <label for="date-in"></label>
-        <input name="date-in" id="date-in" type="date">
-        <label for="date-out"></label>
-        <input name="date-out" id="date-out" type="date">
-        <label for="adults"></label>
-        <input name="adults" id="adults" type="number" value="2">
-        <label for="children"></label>
-        <input name="children" id="children" type="number" value="0">
-        <input type="submit" class="popup-btn btn btn--blue">
-      </form>
-    </div>
     
   </body>
 </html>
