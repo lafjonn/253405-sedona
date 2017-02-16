@@ -14,6 +14,10 @@ a {
   text-decoration: none;
 }
 
+.visually-hidden {
+  display: none;
+}
+
 .headnav {
   max-height: 56px;
 }
@@ -40,7 +44,7 @@ a {
 
 .head-block__images {
   padding-top: 77px;
-  background: url("../img/header.jpg ") top center no-repeat;
+  background: url("../img/header.jpg") top center no-repeat;
   background-color: #5496bd;
   min-height: 510px;
   background-size: cover;
@@ -58,4 +62,133 @@ a {
   background-size: cover;
   height: 57px;
   margin-top: -57px;
+}
+
+.head-block__caption {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.head-block__caption p {
+  width: 500px;
+  text-align: center;
+}
+
+.infoblock {
+  display: flex;
+  height: 256px;
+}
+
+.feature {
+  min-width: 256px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-grow: 2;
+}
+
+.feature__h2,
+.feature__description {
+  max-width: 281px;
+}
+
+.infoblock__image {
+  min-width: 512px;
+  max-width: 800px;
+  flex-grow: 1;
+}
+
+.infoblock__image--town {
+  background: url("../img/gallery-1.jpg") top center no-repeat;
+  background-size: cover;
+}
+
+.infoblock__image--bridge {
+  background: url("../img/gallery-2.jpg") top center no-repeat;
+  background-size: cover;
+}
+
+.comfort {
+  display: flex;
+  justify-content: space-around;
+}
+
+.comfort__item {
+  min-width: 163px;
+  max-width: 282px;
+  text-align: center;
+  margin-top: 164px;
+}
+
+.featureblock {
+  display: flex;
+  justify-content: space-between;
+}
+
+.searchblock {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+}
+
+.searchblock p {
+  max-width: 434px;
+  align-self: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* ====== Отели ======= */
+
+
+.choice {
+  background: url("../img/background.jpg") top center no-repeat;
+  background-color: #5496bd;
+  min-height: 218px;
+  background-size: cover;
+  z-index: 2;
+}
+
+.choice__form {
+  display: flex;
+  color: #fff;
+}
+
+.choice__column {
+  display: flex;
+  flex-direction: column;
+}
+
+.choice__column--right {
+}
+
+.sort {
+  display: flex;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.hotels {
+}
+
+.hotel {
+  min-height: 150px;
+}
+
+.hotel__wrapper {
+  display: flex;
+  height: 90px;
+}
+
+.hotel__info {
+  display: flex;
+  flex-direction: column;
 }

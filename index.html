@@ -37,17 +37,19 @@
           <div class="head-block__text"></div>
         </div>
         <div class="head-block__mask"></div>
-        <p class="head-block--h2">Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
-        <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+        <div class="head-block__caption">
+          <p class="head-block--h2">Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
+          <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+        </div>
       </div>
       
-      <div class="infoblock infoblock--town">
+      <div class="infoblock">
         <div class="infoblock__text feature">
           <p class="feature__h2">Настоящий городок</p>
           <span class="feature__number">- №1 -</span>
           <p class="feature__description">Седона - не аттракцион для туристов, там течет своя жизнь</p>
         </div>
-        <div class="infoblock__image"></div>
+        <div class="infoblock__image  infoblock__image--town"></div>
       </div>
       
       <div class="comfort">
@@ -55,22 +57,18 @@
           <span class="comfort__h2 h2">Жилье</span>
           <p class="comfort__description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
         </div>
-      </div>
-      <div class="comfort">
         <div class="comfort__item">
           <span class="comfort__h2 h2">Еда</span>
           <p class="comfort__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
         </div>
-      </div>
-      <div class="comfort">
         <div class="comfort__item">
           <span class="comfort__h2 h2">Сувениры</span>
           <p class="comfort__description">Не только китайского, но и местного производства!</p>
         </div>
       </div>
       
-      <div class="infoblock infoblock--bridge">
-        <div class="infoblock__image"></div>
+      <div class="infoblock">
+        <div class="infoblock__image  infoblock__image--bridge"></div>
         <div class="infoblock__text feature">
           <p class="feature__h2 h2">Там есть мост дьявола</p>
           <span class="feature__number">- №2 -</span>
@@ -97,17 +95,17 @@
       </div>
       
       <div class="searchblock">
-        <span class="searchblock-h1"></span>
-        <p></p>
-        <a href="#" class="searchblock-btn btn btn--brown"></a>
+        <span class="searchblock-h1">Заинтересовались?</span>
+        <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <a href="#" class="searchblock-btn btn btn--brown">Поиск гостиницы в Седоне</a>
       </div>
       
       <div class="map"></div>
       
     </main>
     
-    <footer class="footer">
-      <div class="footer__wrapper">
+    <footer>
+      <div class="footer">
        
         <div class="footer__tag">#VisitSedona</div>
         <div class="footer__social social">
@@ -126,7 +124,7 @@
       </div>
     </footer>
     
-    <div class="popup popup--hidden">
+    <div class="modal visually-hidden">
       <form>
         <label for="date-in">Дата заезда</label>
         <input name="date-in" id="date-in" type="date" value="24 апреля 2016">
