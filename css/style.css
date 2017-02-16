@@ -3,6 +3,9 @@ body {
   max-width: 1200px;
   margin: auto;
   font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: uppercase;
 }
 
 p {
@@ -16,6 +19,18 @@ a {
 
 .visually-hidden {
   display: none;
+}
+
+.btn {
+  color: #fff;
+}
+
+.btn--brown {
+  background-color: #766357;
+}
+
+.btn--blue {
+  background-color: #81b3d2;
 }
 
 .headnav {
@@ -40,12 +55,14 @@ a {
 
 .headnav a {
   color: #000000;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .head-block__images {
   padding-top: 77px;
   background: url("../img/header.jpg") top center no-repeat;
-  background-color: #5496bd;
+  background-color: #81b3d2;
   min-height: 510px;
   background-size: cover;
 }
@@ -71,14 +88,27 @@ a {
   align-items: center;
 }
 
-.head-block__caption p {
+.head-block__h2 {
+  font-size: 21px;
+  font-weight: bold;
   width: 500px;
   text-align: center;
+}
+
+.head-block__reasons {
+  width: 500px;
+  text-align: center;
+  font-size: 14px;
 }
 
 .infoblock {
   display: flex;
   height: 256px;
+}
+
+.infoblock__text {
+  color: #fff;
+  background-color: #5496bd;
 }
 
 .feature {
@@ -94,7 +124,18 @@ a {
 
 .feature__h2,
 .feature__description {
-  max-width: 281px;
+  max-width: 280px;
+}
+
+.feature__number,
+.feature__description {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.h2 {
+  font-size: 21px;
+  font-weight: bold;
 }
 
 .infoblock__image {
@@ -125,9 +166,15 @@ a {
   margin-top: 164px;
 }
 
+.comfort__description {
+  color: #333333;
+}
+
 .featureblock {
   display: flex;
   justify-content: space-between;
+  background-color: #eeeeee;
+  height: 256px;
 }
 
 .searchblock {
@@ -137,14 +184,51 @@ a {
   margin: auto;
 }
 
+.searchblock__h1 {
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
 .searchblock p {
   max-width: 434px;
   align-self: center;
+  color: #333333;
+  line-height: 30px;
+  margin-bottom: 50px;
+}
+
+.searchblock__btn {
+  font-size: 21px;
+  font-weight: bold;
+  width: 568px;
+  align-self: center;
+  box-sizing: border-box;
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
+.map {
+  background: url("../img/map.jpg") top center no-repeat;
+  background-size: cover;
+  min-height: 475px;
 }
 
 .footer {
   display: flex;
   justify-content: space-around;
+}
+
+.footer__tag {
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.footer__copyright {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
 }
 
 /* ====== Отели ======= */
@@ -155,6 +239,7 @@ a {
   background-color: #5496bd;
   min-height: 218px;
   background-size: cover;
+  position: relative;
   z-index: 2;
 }
 
@@ -181,14 +266,45 @@ a {
 
 .hotel {
   min-height: 150px;
+  width: 100%;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .hotel__wrapper {
-  display: flex;
   height: 90px;
 }
 
+.hotel img {
+float: left;}
+
 .hotel__info {
+  float: left;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hotel__caption {
+  width: 100%;
+}
+
+.hotel__type,
+.hotel__price {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+}
+
+.hotel__type {
+  width: 110px;
+}
+
+.hotel__price {
+  width: 142px;
+}
+
+.hotel__rating {
+  float: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
