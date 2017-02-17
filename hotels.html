@@ -33,34 +33,34 @@
     </header>
     
     <main>
-      <div class="choice">
-        <form class="choice__form">
-         <div class="choice__column">
-           <span>Инфраструктура</span>
-           <label>
+      <div class="filter">
+        <form class="filter__form">
+         <div class="filter__column">
+           <span class="filter__caption">Инфраструктура:</span>
+           <label class="filter__label">
              <input type="checkbox" name="pull" checked>Бассейн
            </label>
-           <label>
+           <label class="filter__label">
              <input type="checkbox" name="park">Парковка
            </label>
-           <label>
+           <label class="filter__label">
              <input type="checkbox" name="wifi">Wi-Fi
            </label>
          </div>
-         <div class="choice__column">
-           <span>Инфраструктура</span>
-           <label>
-             <input type="checkbox" name="pull" checked>Бассейн
+         <div class="filter__column">
+           <span class="filter__caption">Тип жилья:</span>
+           <label class="filter__label">
+             <input type="checkbox" name="hotel" checked>Гостиница
            </label>
-           <label>
-             <input type="checkbox" name="park">Парковка
+           <label class="filter__label">
+             <input type="checkbox" name="motel">Мотель
            </label>
-           <label>
-             <input type="checkbox" name="wifi">Wi-Fi
+           <label class="filter__label">
+             <input type="checkbox" name="apartments">Апартаменты
            </label>
          </div>
-         <div class="choice__column  choice__column--right">
-           <span>Стоимость в сутки (Р)</span>
+         <div class="filter__column  filter__column--right">
+           <span class="filter__caption">Стоимость в сутки (Р)</span>
            <input type="submit" value="Показать">
          </div>
         </form>
@@ -84,11 +84,11 @@
               <span class="hotel__caption">Amara Resort & Spa</span>
               <div class="hotel__type">
                 <span>Гостиница</span>
-                <a class="hotel__btn  btn--blue" href="#">ПОДРОБНЕЕ</a>
+                <a class="hotel__btn  btn  btn--blue" href="#">ПОДРОБНЕЕ</a>
               </div>
               <div class="hotel__price">
                 <span>ОТ 3500 Р.</span>
-                <a class="hotel__btn  btn--brown" href="#">ЗАБРОНИРОВАТЬ</a>
+                <a class="hotel__btn  btn  btn--brown" href="#">ЗАБРОНИРОВАТЬ</a>
               </div>
             </div>
             <div class="hotel__rating">
@@ -105,11 +105,11 @@
               <span class="hotel__caption">Desert Quail Inn</span>
               <div class="hotel__type">
                 <span>Мотель</span>
-                <a class="hotel__info" href="#">ПОДРОБНЕЕ</a>
+                <a class="hotel__btn  btn  btn--blue" href="#">ПОДРОБНЕЕ</a>
               </div>
               <div class="hotel__price">
                 <span>ОТ 2000 Р.</span>
-                <a class="hotel__book" href="#">ЗАБРОНИРОВАТЬ</a>
+                <a class="hotel__btn  btn  btn--brown" href="#">ЗАБРОНИРОВАТЬ</a>
               </div>
             </div>
             <div class="hotel__rating">
@@ -126,11 +126,11 @@
               <span class="hotel__caption">Villas at Poco Diablo</span>
               <div class="hotel__type">
                 <span>Апартаменты</span>
-                <a class="hotel__info" href="#">ПОДРОБНЕЕ</a>
+                <a class="hotel__btn  btn  btn--blue" href="#">ПОДРОБНЕЕ</a>
               </div>
               <div class="hotel__price">
                 <span>ОТ 4000 Р.</span>
-                <a class="hotel__book" href="#">ЗАБРОНИРОВАТЬ</a>
+                <a class="hotel__btn  btn  btn--brown" href="#">ЗАБРОНИРОВАТЬ</a>
               </div>
             </div>
             <div class="hotel__rating">
