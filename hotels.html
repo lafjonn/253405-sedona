@@ -2,8 +2,10 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Седона</title>
+    <title>HTML Academy: Седона</title>
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
   <body>
@@ -26,7 +28,7 @@
             <a href="#">Карта штата</a>
           </li>
           <li class="headnav__item">
-            <a href="#">Гостиницы</a>
+            <a href="">Гостиницы</a>
           </li>
         </ul>
       </nav>
@@ -35,33 +37,48 @@
     <main>
       <div class="filter">
         <form class="filter__form">
-         <div class="filter__column">
-           <span class="filter__caption">Инфраструктура:</span>
-           <label class="filter__label">
-             <input type="checkbox" name="pull" checked>Бассейн
-           </label>
-           <label class="filter__label">
-             <input type="checkbox" name="park">Парковка
-           </label>
-           <label class="filter__label">
-             <input type="checkbox" name="wifi">Wi-Fi
-           </label>
-         </div>
-         <div class="filter__column">
-           <span class="filter__caption">Тип жилья:</span>
-           <label class="filter__label">
-             <input type="checkbox" name="hotel" checked>Гостиница
-           </label>
-           <label class="filter__label">
-             <input type="checkbox" name="motel">Мотель
-           </label>
-           <label class="filter__label">
-             <input type="checkbox" name="apartments">Апартаменты
-           </label>
+         <div class="filter__wrapper">
+           <div class="filter__column">
+             <span class="filter__caption">Инфраструктура:</span>
+             <label class="filter__label">
+               <input class="filter__checkbox" type="checkbox" name="pull" checked>Бассейн
+             </label>
+             <label class="filter__label">
+               <input class="filter__checkbox" type="checkbox" name="park">Парковка
+             </label>
+             <label class="filter__label">
+               <input class="filter__checkbox" type="checkbox" name="wifi">Wi-Fi
+             </label>
+           </div>
+           <div class="filter__column">
+             <span class="filter__caption">Тип жилья:</span>
+             <label class="filter__label">
+               <input class="filter__checkbox" type="checkbox" name="hotel" checked>Гостиница
+             </label>
+             <label class="filter__label">
+               <input class="filter__checkbox" type="checkbox" name="motel">Мотель
+             </label>
+             <label class="filter__label">
+               <input class="filter__checkbox" type="checkbox" name="apartments">Апартаменты
+             </label>
+           </div>
          </div>
          <div class="filter__column  filter__column--right">
            <span class="filter__caption">Стоимость в сутки (Р)</span>
-           <input type="submit" value="Показать">
+           <div class="filter__range">
+             <label for="min-price">От</label>
+              <input id="min-price" type="text" name="min-price" value="0">
+              <label for="max-price">До</label>
+              <input id="max-price" type="text" name="max-price" value="3000">
+           </div>
+           <div class="filter__slider">
+             <div class="filter__fullbar">
+                <div class="filter__bar"></div>
+             </div>
+             <div class="filter__point  filter__point--min"></div>
+             <div class="filter__point  filter__point--max"></div>
+           </div>
+           <input class="filter__submit" type="submit" value="Показать">
          </div>
         </form>
       </div>
@@ -77,7 +94,7 @@
       </div>
       
       <div class="hotels">
-        <div class="hotels__item hotel">
+        <div class="hotels__item  hotel">
           <div class="hotel__wrapper">
             <img src="img/hotel-1.jpg" alt="Amara Resort & Spa" width="135" height="90">
             <div class="hotel__info">
@@ -91,14 +108,14 @@
                 <a class="hotel__btn  btn  btn--brown" href="#">ЗАБРОНИРОВАТЬ</a>
               </div>
             </div>
-            <div class="hotel__rating">
-              <div class="hotel__stars"></div>
-              <div class="hotel__rate-value">Рейтинг: 8,5</div>
-            </div>
+          </div>
+          <div class="hotel__rating">
+            <div class="hotel__stars">★★★★</div>
+            <div class="hotel__rate-value">Рейтинг: 8,5</div>
           </div>
         </div>
         
-        <div class="hotels__item hotel">
+        <div class="hotels__item  hotel">
           <div class="hotel__wrapper">
             <img src="img/hotel-2.jpg" alt="Desert Quail Inn" width="135" height="90">
             <div class="hotel__info">
@@ -113,13 +130,13 @@
               </div>
             </div>
             <div class="hotel__rating">
-              <div class="hotel__stars"></div>
+              <div class="hotel__stars">★★</div>
               <div class="hotel__rate-value">Рейтинг: 8,9</div>
             </div>
           </div>
         </div>
         
-        <div class="hotels__item hotel">
+        <div class="hotels__item  hotel">
           <div class="hotel__wrapper">
             <img src="img/hotel-3.jpg" alt="Villas at Poco Diablo" width="135" height="90">
             <div class="hotel__info">
@@ -134,7 +151,7 @@
               </div>
             </div>
             <div class="hotel__rating">
-              <div class="hotel__stars"></div>
+              <div class="hotel__stars">★★★</div>
               <div class="hotel__rate-value">Рейтинг: 9,2</div>
             </div>
           </div>
@@ -154,9 +171,7 @@
         
         <div class="footer__copyright">
           <span>Website by:</span>
-          <a class="footer__academy">
-            <img src="img/icon-academy.png" alt="HTML Academy">
-          </a>
+          <a class="footer__academy" href="https://htmlacademy.ru/">HTML Academy</a>
         </div>
         
       </div>

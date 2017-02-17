@@ -180,6 +180,45 @@ a {
   margin-bottom: 85px;
 }
 
+.comfort__house,
+.comfort__food,
+.comfort__gift {
+  position: relative;
+}
+
+.comfort__house::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: -5px;
+  background-image: url("../img/icon-house.png");
+  background-repeat: no-repeat;
+  width: 75px;
+  height: 72px;
+}
+
+.comfort__food::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: -17px;
+  background-image: url("../img/icon-food.png");
+  background-repeat: no-repeat;
+  width: 74px;
+  height: 70px;
+}
+
+.comfort__gift::before {
+  content: "";
+  position: absolute;
+  top: -105px;
+  left: 20px;
+  background-image: url("../img/icon-gift.png");
+  background-repeat: no-repeat;
+  width: 64px;
+  height: 76px;
+}
+
 .comfort__description {
   color: #333333;
   margin-top: 30px;
@@ -254,31 +293,45 @@ a {
 }
 
 .social__item {
+  display: inline-block;
   font-size: 0;
   position: relative;
-}
-
-.social__item::before {
-  content: "";
-  position: absolute;
-  top: -20px;
-  left: 0;
   width: 46px;
   height: 48px;
   background-color: #81b3d2;
 }
 
+.social__item::before {
+  content: "";
+  position: absolute;
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+}
+
 .social__item--twitter::before {
-  left: -50px;
+  top: 15px;
+  left: 15px;
+  width: 17px;
+  height: 15px;
+  background-position: -5px -360px;
 }
 
 .social__item--facebook::before {
-  
+  top: 12px;
+  left: 17px;
+  width: 10px;
+  height: 19px;
+  background-position: -5px -229px;
 }
 
 .social__item--youtube::before {
-  left: 50px;
+  top: 16px;
+  left: 13px;
+  width: 20px;
+  height: 16px;
+  background-position: -5px -385px;
 }
+
 
 .footer__copyright {
   display: flex;
@@ -288,6 +341,18 @@ a {
 
 .footer__academy {
   margin-left: 10px;
+  font-size: 0;
+  background-image: url(../img/icon-academy.png);
+  width: 113px;
+  height: 39px;
+}
+
+.footer__academy:hover {
+  background-image: url(../img/icon-academy-blue.png);
+}
+
+.footer__academy:active {
+  background-image: url(../img/icon-academy-grey.png);
 }
 
 /* ====== Отели ======= */
@@ -301,7 +366,6 @@ a {
   position: relative;
   z-index: 2;
   width: 100%;
-  min-width: 683px;
 }
 
 .filter__form {
@@ -309,18 +373,31 @@ a {
   color: #fff;
   max-width: 1060px;
   min-width: 683px;
-  margin-left: 45px;
-  justify-content: space-around;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.filter__wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 400px;
+  min-width: 380px;
+  padding-left: 45px;
 }
 
 .filter__column {
   display: flex;
   flex-direction: column;
-  margin-left: 45px;
+  width: 150px;
 }
 
 .filter__label {
   margin-bottom: 30px;
+  padding-left: 40px;
+}
+
+.filter__checkbox {
+  display: none;
 }
 
 .filter__caption {
@@ -332,18 +409,25 @@ a {
 .filter__column--right {
   min-width: 230px;
   max-width: 400px;
-  margin-left: 300px;
+}
+
+.filter__submit {
+  width: 138px;
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px;
 }
 
 .sort {
   display: flex;
-  border-bottom: 1px solid #e5e5e5;
   justify-content: flex-start;
   min-width: 680px;
-  max-width: 1057px;
   margin-left: 45px;
   height: 90px;
   align-items: center;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .sort__strong {
@@ -376,8 +460,9 @@ a {
 
 .hotel {
   min-height: 150px;
-  width: 100%;
   border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  justify-content: space-between;
 }
 
 .hotel__wrapper {
@@ -385,7 +470,8 @@ a {
 }
 
 .hotel img {
-float: left;}
+  float: left;
+}
 
 .hotel__info {
   float: left;
@@ -427,6 +513,124 @@ float: left;}
   justify-content: flex-end;
 }
 
+.hotel__stars {
+  font-size: 24px;
+  letter-spacing: 4px;
+  top: 28px;
+  right: 67px;
+  color: #81b3d2;
+}
+
 .hotel__rate-value {
   background-color: #f2f2f2;
+}
+
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+/* Спрайт */
+
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-icon-calendar-black {
+    width: 21px;
+    height: 22px;
+    background-position: -5px -5px;
+}
+
+.sprite-icon-calender-blue {
+    width: 21px;
+    height: 22px;
+    background-position: -5px -37px;
+}
+
+.sprite-icon-calender-grey {
+    width: 21px;
+    height: 22px;
+    background-position: -5px -69px;
+}
+
+.sprite-icon-checkbox {
+    width: 22px;
+    height: 22px;
+    background-position: -5px -101px;
+}
+
+.sprite-icon-checkbox-checked {
+    width: 26px;
+    height: 22px;
+    background-position: -5px -133px;
+}
+
+.sprite-icon-checkbox-checked-dis {
+    width: 26px;
+    height: 22px;
+    background-position: -5px -165px;
+}
+
+.sprite-icon-checkbox-dis {
+    width: 22px;
+    height: 22px;
+    background-position: -5px -197px;
+}
+
+.sprite-icon-fb {
+    width: 10px;
+    height: 19px;
+    background-position: -5px -229px;
+}
+
+.sprite-icon-min-black {
+    width: 12px;
+    height: 3px;
+    background-position: -5px -258px;
+}
+
+.sprite-icon-min-blue {
+    width: 12px;
+    height: 3px;
+    background-position: -5px -271px;
+}
+
+.sprite-icon-min-grey {
+    width: 12px;
+    height: 3px;
+    background-position: -5px -284px;
+}
+
+.sprite-icon-plus-black {
+    width: 11px;
+    height: 11px;
+    background-position: -5px -297px;
+}
+
+.sprite-icon-plus-blue {
+    width: 11px;
+    height: 11px;
+    background-position: -5px -318px;
+}
+
+.sprite-icon-plus-grey {
+    width: 11px;
+    height: 11px;
+    background-position: -5px -339px;
+}
+
+.sprite-icon-tw {
+    width: 17px;
+    height: 15px;
+    background-position: -5px -360px;
+}
+
+.sprite-icon-youtube {
+    width: 20px;
+    height: 16px;
+    background-position: -5px -385px;
 }
