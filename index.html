@@ -99,9 +99,42 @@
         <span class="searchblock__h1">Заинтересовались?</span>
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <a href="#" class="searchblock__btn btn btn--brown">Поиск гостиницы в Седоне</a>
+        <div class="modal">
+          <form class="modal__form" action="hotels.html" method="post">
+            <label for="check-in">Дата заезда:</label>
+            <div class="modal__date-wrapper">
+              <input type="text" name="check-in" id="check-in" value="24 апреля 2016">
+              <a class="modal__date-select" href="#">Выбор даты</a>
+            </div>
+
+            <label for="check-out">Дата выезда:</label>
+            <div class="modal__date-wrapper">
+              <input type="text" name="check-out" id="check-out" value="4 июля 2016">
+              <a class="modal__date-select" href="#">Выбор даты</a>
+            </div>
+
+            <label for="adults">Взрослые:</label>
+            <div class="modal__counter-wrapper">
+              <a class="modal__counter-less" href="#">Меньше</a>
+              <input type="text" name="adults" id="adults" value="2">
+              <a class="modal__counter-more" href="#">Больше</a>
+            </div>
+
+            <label for="children">Дети:</label>
+            <div class="modal__counter-wrapper">
+              <a class="modal__counter-less" href="#">Меньше</a>
+              <input type="text" name="children" id="children" value="0">
+              <a class="modal__counter-more" href="#">Больше</a>
+            </div>
+
+            <button class="modal__btn btn btn--blue" type="submit">Найти</button>
+          </form>
+        </div>
       </div>
       
-      <div class="map"></div>
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d418644.20805573254!2d-111.91307025202616!3d34.94011637716841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1487507996121" width="100%" height="475" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
       
     </main>
     
@@ -122,20 +155,6 @@
         
       </div>
     </footer>
-    
-    <div class="modal visually-hidden">
-      <form>
-        <label for="date-in">Дата заезда</label>
-        <input name="date-in" id="date-in" type="date" value="24 апреля 2016">
-        <label for="date-out">Дата выезда</label>
-        <input name="date-out" id="date-out" type="date" value="4 июля 2016">
-        <label for="adults">Взрослые</label>
-        <input name="adults" id="adults" type="number" value="2">
-        <label for="children">Дети</label>
-        <input name="children" id="children" type="number" value="0">
-        <input type="submit" class="popup-btn btn btn--blue" value="Найти">
-      </form>
-    </div>
-    
+    <script src="js/script.js"></script>  
   </body>
 </html>

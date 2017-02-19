@@ -289,6 +289,7 @@ a {
   flex-direction: column;
   text-align: center;
   margin: auto;
+  position: relative;
 }
 
 .searchblock__h1 {
@@ -320,6 +321,8 @@ a {
   background: url("../img/map.jpg") top center no-repeat;
   background-size: cover;
   min-height: 475px;
+  position: relative;
+  overflow: hidden;
 }
 
 .footer {
@@ -413,6 +416,192 @@ a {
 
 .footer__academy:active {
   background-image: url(../img/icon-academy-grey.png);
+}
+
+.modal {
+  position: absolute;
+  z-index: 10;
+  left: 316px;
+  top: 320px;
+  display: block;
+  visibility: visible;
+  box-sizing: border-box;
+  width: 568px;
+  min-height: 395px;
+  padding: 55px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+  background-color: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  font-size: 0;
+}
+
+.modal__hide {
+  visibility: hidden;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.modal label {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 25%;
+  margin-bottom: 37px;
+  text-align: left;
+  vertical-align: baseline;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.modal label:last-of-type {
+  padding-right: 25px;
+  text-align: right;
+}
+
+.modal input {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 38px;
+  padding: 0 12px;
+  text-align: left;
+  vertical-align: baseline;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  background-color: #f2f2f2;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.modal input:hover {
+  background-color: #ebebeb;
+}
+
+.modal input:focus {
+  outline: 2px solid #e5e5e5;
+  background-color: #ffffff;
+}
+
+.modal__date-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 75%;
+  vertical-align: baseline;
+}
+
+.modal__date-select {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  display: block;
+  cursor: pointer;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+  background-position: -5px -69px;
+  font-size: 0;
+  width: 21px;
+  height: 22px;
+}
+
+.modal__date-select:hover {
+  background-position: -5px -5px;
+}
+
+.modal__date-select:active {
+  background-position: -5px -37px;
+}
+
+.modal__counter-wrapper {
+  display: inline-block;
+  width: 25%;
+  height: 38px;
+  vertical-align: baseline;
+}
+
+.modal__counter-wrapper > input {
+  width: 33.3%;
+  text-align: center;
+}
+
+.modal__counter-wrapper > a {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 33.3%;
+  min-height: 38px;
+  vertical-align: top;
+  text-decoration: none;
+  color: #a9a9a9;
+  background-color: #f2f2f2;
+  font-size: 0;
+}
+
+.modal__counter-wrapper:hover > a,
+.modal__counter-wrapper:hover > input {
+  background-color: #ebebeb;
+}
+
+.modal__counter-wrapper > input:focus {
+  outline: 2px solid #e5e5e5;
+  background-color: #ffffff;
+}
+
+.modal__counter-less::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 14px;
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+  width: 12px;
+  height: 3px;
+  background-position: -5px -284px;
+}
+
+.modal__counter-more::after {
+  content: "";
+  position: absolute;
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+  width: 11px;
+  height: 11px;
+  background-position: -5px -339px;
+  top: 13px;
+  left: 13px;
+}
+
+.modal__counter-less:hover::before {
+  background-position: -5px -258px;
+}
+
+.modal__counter-more:hover::after {
+  background-position: -5px -297px;
+}
+
+.modal__counter-less:active::before {
+  background-position: -5px -271px;
+}
+
+.modal__counter-more:active::after {
+  background-position: -5px -318px;
+}
+
+.modal__btn {
+  width: 458px;
+  height: 58px;
+  box-sizing: border-box;
+  font-size: 21px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  margin-top: 30px;
 }
 
 /* ====== Отели ======= */
