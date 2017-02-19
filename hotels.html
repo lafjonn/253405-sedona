@@ -11,24 +11,22 @@
   <body>
    
     <header>
-      <nav class="headnav">
+      <nav class="menu">
+        <a class="menu__logo" href="index.html">
+          <img src="img/logo.png">
+        </a>
         <ul>
-          <li class="headnav__item">
-            <a href="#">Информация</a>
+          <li>
+            <a class="menu__item" href="#">Информация</a>
           </li>
-          <li class="headnav__item">
-            <a href="#">Фото и видео</a>
+          <li>
+            <a class="menu__item" href="#">Фото и видео</a>
           </li>
-          <li class="headnav__item  headnav__item--logo">
-            <a>
-              <img src="img/logo.png">
-            </a>
+          <li>
+            <a class="menu__item" href="#">Карта штата</a>
           </li>
-          <li class="headnav__item">
-            <a href="#">Карта штата</a>
-          </li>
-          <li class="headnav__item">
-            <a href="">Гостиницы</a>
+          <li>
+            <a class="menu__item  menu__item--active">Гостиницы</a>
           </li>
         </ul>
       </nav>
@@ -40,36 +38,30 @@
          <div class="filter__wrapper">
            <div class="filter__column">
              <span class="filter__caption">Инфраструктура:</span>
-             <label class="filter__label">
-               <input class="filter__checkbox" type="checkbox" name="pull" checked>Бассейн
-             </label>
-             <label class="filter__label">
-               <input class="filter__checkbox" type="checkbox" name="park">Парковка
-             </label>
-             <label class="filter__label">
-               <input class="filter__checkbox" type="checkbox" name="wifi">Wi-Fi
-             </label>
+             <input class="filter__checkbox" type="checkbox" name="pull" id="pull" checked disabled>
+             <label class="filter__label" for="pull">Бассейн</label>
+             <input class="filter__checkbox" type="checkbox" name="park" id="park">
+             <label class="filter__label" for="park">Парковка</label>
+             <input class="filter__checkbox" type="checkbox" name="wifi" id="wifi">
+             <label class="filter__label" for="wifi">Wi-Fi</label>
            </div>
            <div class="filter__column">
              <span class="filter__caption">Тип жилья:</span>
-             <label class="filter__label">
-               <input class="filter__checkbox" type="checkbox" name="hotel" checked>Гостиница
-             </label>
-             <label class="filter__label">
-               <input class="filter__checkbox" type="checkbox" name="motel">Мотель
-             </label>
-             <label class="filter__label">
-               <input class="filter__checkbox" type="checkbox" name="apartments">Апартаменты
-             </label>
+             <input class="filter__checkbox" type="checkbox" name="hotel" id="hotel" checked>
+             <label class="filter__label" for="hotel">Гостиница</label>
+             <input class="filter__checkbox" type="checkbox" name="motel" id="motel">
+             <label class="filter__label" for="motel">Мотель</label>
+             <input class="filter__checkbox" type="checkbox" name="apartments" id="apartments" disabled>
+             <label class="filter__label" for="apartments">Апартаменты</label>
            </div>
          </div>
          <div class="filter__column  filter__column--right">
            <span class="filter__caption">Стоимость в сутки (Р)</span>
            <div class="filter__range">
              <label for="min-price">От</label>
-              <input id="min-price" type="text" name="min-price" value="0">
-              <label for="max-price">До</label>
-              <input id="max-price" type="text" name="max-price" value="3000">
+             <input class="filter__range-min" id="min-price" type="text" name="min-price" value="0">
+             <label for="max-price">До</label>
+             <input class="filter__range-max" id="max-price" type="text" name="max-price" value="3000">
            </div>
            <div class="filter__slider">
              <div class="filter__fullbar">
@@ -84,13 +76,17 @@
       </div>
       
       <div class="sort">
-        <span class="sort__strong">Найдено: 3</span>
-        <span class="sort__caption">Сортировка:</span>
-        <span class="sort__item  sort__item--active">По цене</span>
-        <span class="sort__item">По типу</span>
-        <span class="sort__item">По рейтингу</span>
-        <div class="sort__arrow"></div>
-        <div class="sort__arrow  sort__arrow--active"></div>
+        <div class="sort__items-block">
+          <span class="sort__strong">Найдено: 3</span>
+          <span class="sort__caption">Сортировка:</span>
+          <span class="sort__item  sort__item--active">По цене</span>
+          <span class="sort__item">По типу</span>
+          <span class="sort__item">По рейтингу</span>
+        </div>
+        <div class="sort__arrow-block">
+          <a class="sort__arrow" href="#">▲</a>
+          <a class="sort__arrow sort__arrow--active">▼</a>
+        </div>
       </div>
       
       <div class="hotels">
@@ -98,7 +94,7 @@
           <div class="hotel__wrapper">
             <img src="img/hotel-1.jpg" alt="Amara Resort & Spa" width="135" height="90">
             <div class="hotel__info">
-              <span class="hotel__caption">Amara Resort & Spa</span>
+              <span class="hotel__caption">Amara Resort &amp; Spa</span>
               <div class="hotel__type">
                 <span>Гостиница</span>
                 <a class="hotel__btn  btn  btn--blue" href="#">ПОДРОБНЕЕ</a>
@@ -129,10 +125,10 @@
                 <a class="hotel__btn  btn  btn--brown" href="#">ЗАБРОНИРОВАТЬ</a>
               </div>
             </div>
-            <div class="hotel__rating">
-              <div class="hotel__stars">★★</div>
-              <div class="hotel__rate-value">Рейтинг: 8,9</div>
-            </div>
+          </div>
+          <div class="hotel__rating">
+            <div class="hotel__stars">★★</div>
+            <div class="hotel__rate-value">Рейтинг: 8,9</div>
           </div>
         </div>
         
@@ -150,10 +146,10 @@
                 <a class="hotel__btn  btn  btn--brown" href="#">ЗАБРОНИРОВАТЬ</a>
               </div>
             </div>
-            <div class="hotel__rating">
-              <div class="hotel__stars">★★★</div>
-              <div class="hotel__rate-value">Рейтинг: 9,2</div>
-            </div>
+          </div>
+          <div class="hotel__rating">
+            <div class="hotel__stars">★★★</div>
+            <div class="hotel__rate-value">Рейтинг: 9,2</div>
           </div>
         </div>
       </div>
