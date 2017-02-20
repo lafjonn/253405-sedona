@@ -15,8 +15,10 @@ searchBtn.addEventListener("click", function(event) {
 modalForm.addEventListener("submit", function(event) {
   if(inputs[0].value < 1) {
     event.preventDefault();
-
-    alert("Выберите минимум одного взрослого.");
+    modalForm.classList.remove("modal__error");
+    modalForm.offsetWidth = modalForm.offsetWidth;
+    modalForm.classList.add("modal__error");
+    console.log("Выберите как минимум одного взрослого");
   }
 });
 
