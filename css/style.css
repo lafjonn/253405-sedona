@@ -207,6 +207,7 @@ body {
 .infoblock__image {
   min-width: 512px;
   max-width: 800px;
+  height: 256px;
   flex-grow: 1;
 }
 
@@ -331,6 +332,7 @@ body {
   align-self: center;
   box-sizing: border-box;
   padding-top: 30px;
+  z-index: 11;
 }
 
 .map {
@@ -370,6 +372,7 @@ body {
   height: 48px;
   background-color: #81b3d2;
   margin-left: 2px;
+  vertical-align: sub;
 }
 
 .social__item::before {
@@ -475,7 +478,7 @@ body {
   width: 25%;
   margin-bottom: 37px;
   text-align: left;
-  vertical-align: baseline;
+  vertical-align: sub;
   font-weight: bold;
   font-size: 14px;
 }
@@ -492,7 +495,7 @@ body {
   min-height: 38px;
   padding: 0 12px;
   text-align: left;
-  vertical-align: baseline;
+  vertical-align: sub;
   text-transform: uppercase;
   border: none;
   outline: none;
@@ -543,6 +546,7 @@ body {
 
 .modal__counter-wrapper {
   display: inline-block;
+  vertical-align: middle;
   width: 25%;
   height: 38px;
   vertical-align: baseline;
@@ -556,6 +560,7 @@ body {
 .modal__counter-wrapper > a {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
   box-sizing: border-box;
   width: 33.3%;
   min-height: 38px;
@@ -1035,10 +1040,4 @@ body {
   margin-top: 40px;
   padding: 5px 15px;
   border-radius: 1px;
-}
-
-.sprite {
-    background-image: url(spritesheet.png);
-    background-repeat: no-repeat;
-    display: block;
 }
