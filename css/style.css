@@ -152,11 +152,12 @@ body {
 .infoblock {
   display: flex;
   min-height: 256px;
+  background-color: #81b3d2;
 }
 
 .infoblock__text {
   color: #fff;
-  background-color: #5496bd;
+  background-color: #81b3d2;
   min-width: 256px;
   max-width: 400px;
 }
@@ -517,7 +518,7 @@ body {
   position: relative;
   display: inline-block;
   width: 75%;
-  vertical-align: baseline;
+  vertical-align: bottom;
 }
 
 .modal__date-select {
@@ -549,7 +550,6 @@ body {
   vertical-align: middle;
   width: 25%;
   height: 38px;
-  vertical-align: baseline;
 }
 
 .modal__counter-wrapper input {
@@ -560,7 +560,6 @@ body {
 .modal__counter-wrapper > a {
   position: relative;
   display: inline-block;
-  vertical-align: middle;
   box-sizing: border-box;
   width: 33.3%;
   min-height: 38px;
